@@ -14,8 +14,10 @@ require("vendor/autoload.php");
 $f3 = Base:: instance();
 
 //define a default route
+//saving the title and a number in an f3 to print it in home.html
 $f3->route('GET /', function($f3){
     $f3->set('title', 'All About Templating');
+    $f3->set('temp',67);
     $view = new Template();
 //    echo "<h1>Welcome!</h1>";
     echo $view->render('views/home.html');
